@@ -3,7 +3,7 @@ import PreviousNumbers from './PreviousNumbers';
 
 const Form = () => {
   const randomNumber = () => {
-    const min = 1;
+    const min = 10;
     const max = 100;
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
@@ -12,6 +12,7 @@ const Form = () => {
   const [random, setRandom] = useState(randomNumber());
   const [guesses, setGuesses] = useState([]);
   const [attempt, setAttempt] = useState([10]);
+  const [alert, setAlert] = useState(false);
 
   const changeHandler = (e) => {
     setNumber(e.target.value);
@@ -19,20 +20,25 @@ const Form = () => {
 
   const submitNumber = (e) => {
     e.preventDefault();
-    setNumber('');
-    setAttempt([attempt - 1]);
-    setGuesses([...guesses, number]);
-    console.log(random);
-    console.log(attempt);
-    console.log(number);
+    if (attempt === 0 ) {
+      setAlert(true);
+      console.log('error');
+      // ????
+    } else {
+      setNumber('');
+      setAttempt([attempt - 1]);
+      setGuesses([...guesses, number]);
+      console.log(random);
+      console.log(attempt);
+      console.log(number);
+    }
   };
 
   const clearInput = () => {
     setNumber('');
   };
 
-  //urediti!
-
+  //moram srediti!
   const resetGame = () => {
     setNumber('');
     setRandom(randomNumber());
@@ -72,16 +78,7 @@ const Form = () => {
           <div className='attempt'>Remaining attempts: {attempt}</div>
           <PreviousNumbers guesses={guesses} />
           <div className='message'>
-            {/* {attempt <= 0 && <div className='over'>GAME OVER!</div>} */}
-            {number === random ? (
-              <div className='right'>Congratulation!</div>
-            ) : number < random ? (
-              <div className='low'>UPS! Last guess was too low!</div>
-            ) : number > random ? (
-              <div className='low'>UPS! Last guess was too high!</div>
-            ) : (
-              attempt <= 0 && <div className='over'>GAME OVER!</div>
-            )}
+            {alert && <div className='over'>GAME OVER!</div>}
           </div>
           {attempt <= 0 && <button onClick={newGame}>Start new Game</button>}
         </div>
