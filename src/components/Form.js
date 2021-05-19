@@ -11,8 +11,8 @@ const Form = () => {
   const [number, setNumber] = useState('');
   const [random, setRandom] = useState(randomNumber());
   const [guesses, setGuesses] = useState([]);
-  const [attempt, setAttempt] = useState([10]);
-  const [alert, setAlert] = useState(false);
+  const [attempt, setAttempt] = useState(10);
+  const [alert, setAlert] = useState('');
 
   const changeHandler = (e) => {
     setNumber(e.target.value);
@@ -20,18 +20,13 @@ const Form = () => {
 
   const submitNumber = (e) => {
     e.preventDefault();
-    if (attempt === 0 ) {
-      setAlert(true);
-      console.log('error');
-      // ????
-    } else {
-      setNumber('');
-      setAttempt([attempt - 1]);
-      setGuesses([...guesses, number]);
-      console.log(random);
-      console.log(attempt);
-      console.log(number);
-    }
+    if (parseInt(number, 10) === random) setAlert('Congrats!');
+    else if (guesses.length === 9) setAlert('Game Over!')
+    else if(parseInt(number, 10) < random) setAlert('Try higher!');
+    else setAlert('Try lower');
+    setAttempt(attempt - 1);
+    setGuesses([...guesses, number]);
+    setNumber('');
   };
 
   const clearInput = () => {
@@ -49,7 +44,7 @@ const Form = () => {
   const newGame = () => {
     setNumber('');
     setRandom(randomNumber());
-    setAttempt([10]);
+    setAttempt(10);
     setGuesses([]);
   };
 
@@ -78,9 +73,14 @@ const Form = () => {
           <div className='attempt'>Remaining attempts: {attempt}</div>
           <PreviousNumbers guesses={guesses} />
           <div className='message'>
-            {alert && <div className='over'>GAME OVER!</div>}
+            <div className='over'>{alert}</div>
           </div>
-          {attempt <= 0 && <button onClick={newGame}>Start new Game</button>}
+          {alert === 'Congrats!' && (
+            <button onClick={newGame}>Start new Game</button>
+          )}
+          {alert === 'Game Over!' && (
+            <button onClick={newGame}>Start new Game</button>
+          )}
         </div>
       </form>
     </div>
