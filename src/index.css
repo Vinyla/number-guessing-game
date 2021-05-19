@@ -4,3 +4,24 @@ body {
   margin: 0;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  top: 0;
+  background-color: #383e56;
+  color: white;
+}
+
+.header img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.container {
+ width: 50%;
+ margin: 0 auto;
+ text-align: center;
+}
+

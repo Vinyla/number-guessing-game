@@ -1,0 +1,21 @@
+.game-header {
+  height: 60px;
+  margin-top: 50px;
+  padding: 6px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #383e56;
+  color: white;
+}
+.game-header h3 {
+  margin: 0;
+}
+.game-header p {
+  margin: 0;
+  font-size: 12px;
+}
+.game-body {
+  background-color: #9fb8ad;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}

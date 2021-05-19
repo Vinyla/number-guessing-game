@@ -1,0 +1,85 @@
+.form {
+  padding: 20px;
+}
+
+input {
+  width: 30px;
+  margin-left: 20px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #c5d7bd;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+button {
+  padding: 10px;
+  margin: 15px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fb743e;
+  color: white;
+}
+
+button:hover {
+  background-color: #fa8e63;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.previous-number {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guesses {
+  display: flex;
+  justify-content: center;
+  width: 16px;
+  margin: 0 4px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background-color: #c5d7bd;
+}
+
+.message {
+  margin-top: 14px;
+}
+
+.over {
+  background-color: #ffcc29;
+}
+
+.right {
+  background-color: #4aa96c;
+}
+
+.low {
+  background-color: #383e56;
+}
+
+.high {
+  background-color: #fa483e;
+}
