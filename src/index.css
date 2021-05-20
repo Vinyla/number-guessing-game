@@ -20,8 +20,26 @@ body {
 }
 
 .container {
- width: 50%;
+ width: 40%;
  margin: 0 auto;
  text-align: center;
 }
 
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
