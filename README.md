@@ -8,16 +8,16 @@ After submiting the answer the user get's the answer depending on if number is h
 
 ## Project Features
 
-Number Guessing Game screen
-Easy to integrate
-Responsive
+- Number Guessing Game screen
+- Easy to integrate
+- Responsive
 
 ## Technologies
 
-HTML
-CSS
-JS
-React JS
+- HTML
+- CSS
+- JS
+- React JS
 
 ## How to run Number Guessing Game
 
