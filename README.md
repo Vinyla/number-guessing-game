@@ -3,7 +3,7 @@
 The Number Guessing Game is a very simple and fun game made with [React](https://reactjs.org/).
 The goal of the game is to guess a randomly generated number set by the computer in 10 attempts.
 
-The Number Guessing Game allows the user to enter a number and click on a button "Submit number" to submit the answer, click on button "Clear" to reset the input field, or "Reset" to reset the game.
+The Number Guessing Game allows the user to enter a number and click on a button "Submit number" to submit the answer, click on button "Clear" to reset the input field, or "Reset" to reset the game, and "Start new game".
 After submiting the answer the user get's the answer depending on if number is higher, lower or equal to the secret number.
 
 ## Project Features
