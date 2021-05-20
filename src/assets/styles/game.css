@@ -19,3 +19,47 @@
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.previous-number {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guesses {
+  display: flex;
+  justify-content: center;
+  width: 16px;
+  margin: 0 4px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background-color: #c5d7bd;
+}
+
+.message {
+  margin-top: 14px;
+}
+
+.low {
+  background-color: #ffcc29;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.right {
+  background-color: #4aa96c;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.high {
+  background-color: #383e56;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.over {
+  background-color: #fa483e;
+  padding: 4px;
+  border-radius: 4px;
+}

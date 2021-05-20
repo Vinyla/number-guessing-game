@@ -13,3 +13,4 @@ const PreviousNumbers = ({ guesses }) => {
 };
 
 export default PreviousNumbers;
+ 
