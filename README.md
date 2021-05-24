@@ -22,7 +22,7 @@ After submiting the answer the user get's the answer depending on if number is h
 ## How to run Number Guessing Game
 
 1. git clone https://github.com/Vinyla/number-guessing-game
-2. cd node-server
+2. cd number-guessing-game
 3. npm install
 4. npm start
 5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
