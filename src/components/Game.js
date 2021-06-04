@@ -42,7 +42,6 @@ const Game = () => {
     setGuesses([]);
   };
 
-
   return (
     <div>
       <div className='container'>
@@ -65,24 +64,48 @@ const Game = () => {
                     disabled={attempt <= 0}
                   />
                 </div>
+                {(number < 0 || number > 100 || parseInt(number, 10) === 0) && (
+                  <div className='minMax'>min. 1 - max. 100</div>
+                )}
                 <div>
-                  <button type='submit' onClick={submitNumber} disabled={!number || attempt <= 0}>
+                  <button
+                    type='submit'
+                    onClick={submitNumber}
+                    disabled={
+                      !number || attempt <= 0 || number < 0 || number > 100
+                    }
+                  >
                     Submit number
                   </button>
-                  <button onClick={clearInput} disabled={!number || attempt <= 0}>
+                  <button
+                    onClick={clearInput}
+                    disabled={!number || attempt <= 0}
+                  >
                     Clear
                   </button>
-                  <button onClick={resetGame} disabled={attempt <= 0}>Reset</button>
+                  <button onClick={resetGame} disabled={attempt <= 0}>
+                    Reset
+                  </button>
                 </div>
               </form>
               <Attempt attempt={attempt} />
               <PreviousNumbers guesses={guesses} />
-              {alert === 'Congratulations!' && <div className='right'>{alert}</div>}
-              {alert === 'Congratulations!' && <button onClick={resetGame}>Start new Game</button>}
+              {alert === 'Congratulations!' && (
+                <div className='right'>{alert}</div>
+              )}
+              {alert === 'Congratulations!' && (
+                <button onClick={resetGame}>Start new Game</button>
+              )}
               {alert === 'Game Over!' && <div className='over'>{alert}</div>}
-              {alert === 'Game Over!' && <button onClick={resetGame}>Start new Game</button>}
-              {alert === 'Number too low!' && <div className='low'>{alert}</div>}
-              {alert === 'Number too high!' && <div className='high'>{alert}</div>}
+              {alert === 'Game Over!' && (
+                <button onClick={resetGame}>Start new Game</button>
+              )}
+              {alert === 'Number too low!' && (
+                <div className='low'>{alert}</div>
+              )}
+              {alert === 'Number too high!' && (
+                <div className='high'>{alert}</div>
+              )}
             </div>
           </div>
         </div>

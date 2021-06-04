@@ -50,16 +50,24 @@
   background-color: #4aa96c;
   padding: 4px;
   border-radius: 4px;
+  color: white;
 }
-
 .high {
   background-color: #383e56;
   padding: 4px;
   border-radius: 4px;
+  color: white;
 }
 
 .over {
   background-color: #fa483e;
   padding: 4px;
   border-radius: 4px;
+  color: white;
+}
+
+.minMax {
+  color: red;
+  padding: 4px;
+  font-size: 12px;
 }
